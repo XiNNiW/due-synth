@@ -27,7 +27,7 @@
 								<option id="gnu.cpp.compiler.option.debugging.level.1713753181" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1522300775" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/libTest}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-project-library/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-library/include}&quot;"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.include.files.949414594" name="Include files (-include)" superClass="gnu.cpp.compiler.option.include.files" useByScannerDiscovery="false"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.2078853569" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
@@ -36,10 +36,10 @@
 							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.1604248942" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker">
 								<option id="gnu.cpp.link.option.libs.195255215" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
 									<listOptionValue builtIn="false" value="pthread"/>
-									<listOptionValue builtIn="false" value="due-project-library"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="due-synth-library"/>
 								</option>
 								<option id="gnu.cpp.link.option.paths.1544608842" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-project-library/Debug}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-library/Debug}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.463043393" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>

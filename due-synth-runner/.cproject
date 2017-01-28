@@ -19,18 +19,18 @@
 							<builder buildPath="${workspace_loc:/due_project_runner}/Release" id="it.baeyens.arduino.sketch.builder.1360797623" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Arduino sketch builder" superClass="it.baeyens.arduino.sketch.builder"/>
 							<tool id="it.baeyens.arduino.tool.sketch.compiler.cpp.1096895628" name="Arduino C++ Compiler" superClass="it.baeyens.arduino.tool.sketch.compiler.cpp">
 								<option id="it.baeyens.arduino.compiler.cpp.sketch.option.incpath.987388145" name="Include Paths (-I)" superClass="it.baeyens.arduino.compiler.cpp.sketch.option.incpath" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due_project_runner/core/core}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due_project_runner/core/variant}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due_project_runner/libraries/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-project-library/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-runner/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-runner/core/variant}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-runner/libraries/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-library/include}&quot;"/>
 								</option>
 								<inputType id="it.baeyens.arduino.compiler.cpp.sketch.input.2042023131" name="CPP source files" superClass="it.baeyens.arduino.compiler.cpp.sketch.input"/>
 							</tool>
 							<tool id="it.baeyens.arduino.tool.compiler.c.126059925" name="Arduino C Compiler" superClass="it.baeyens.arduino.tool.compiler.c">
 								<option id="it.baeyens.arduino.compiler.c.sketch.option.incpath.114801556" name="Include Paths (-I)" superClass="it.baeyens.arduino.compiler.c.sketch.option.incpath" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due_project_runner/core/core}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due_project_runner/core/variant}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due_project_runner/libraries/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-runner/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-runner/core/variant}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-runner/libraries/src}&quot;"/>
 								</option>
 								<inputType id="it.baeyens.arduino.compiler.c.sketch.input.4653856" name="C Source Files" superClass="it.baeyens.arduino.compiler.c.sketch.input"/>
 							</tool>

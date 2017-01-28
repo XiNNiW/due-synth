@@ -134,7 +134,7 @@
  /Users/davidminnix/eclipse/cpp-neon/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/sam/1.6.11/cores/arduino/USB/USBAPI.h \
  /Users/davidminnix/eclipse/cpp-neon/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/sam/1.6.11/cores/arduino/RingBuffer.h \
  /Users/davidminnix/eclipse/cpp-neon/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/sam/1.6.11/cores/arduino/Stream.h \
- /Users/davidminnix/Documents/workspace-due-custom/due-project-library/include/factorial.h \
+ /Users/davidminnix/Documents/workspace-due-synth/due-synth-library/include/factorial.h \
  ../due_project_runner.ino
 
 /Users/davidminnix/eclipse/cpp-neon/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/sam/1.6.11/cores/arduino/Arduino.h:
@@ -407,6 +407,6 @@
 
 /Users/davidminnix/eclipse/cpp-neon/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/sam/1.6.11/cores/arduino/Stream.h:
 
-/Users/davidminnix/Documents/workspace-due-custom/due-project-library/include/factorial.h:
+/Users/davidminnix/Documents/workspace-due-synth/due-synth-library/include/factorial.h:
 
 ../due_project_runner.ino:
