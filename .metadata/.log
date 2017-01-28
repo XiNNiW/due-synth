@@ -1813,3 +1813,153 @@ org.osgi.service.prefs.BackingStoreException: Exception loading preferences from
 	at org.eclipse.cdt.internal.core.pdom.PDOMSetupJob.syncronizeProjectSettings(PDOMSetupJob.java:73)
 	at org.eclipse.cdt.internal.core.pdom.PDOMSetupJob.run(PDOMSetupJob.java:55)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY it.baeyens.arduino.core 1 0 2017-01-28 12:23:10.255
+!MESSAGE The folder /Users/davidminnix/Arduino/hardware' does not contain any files.
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-01-28 12:24:42.331
+!MESSAGE Indexed 'due-custom-cpp-runner' (0 sources, 0 headers) in 0.013 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY it.baeyens.cdt.refactor 1 0 2017-01-28 12:26:14.986
+!MESSAGE changed path from /due-custom-sketch to /due-project-library
+
+!ENTRY it.baeyens.cdt.refactor 1 0 2017-01-28 12:26:15.095
+!MESSAGE changed path from /due-custom-sketch to /due-project-library
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-01-28 12:26:17.026
+!MESSAGE Indexed 'due-project-library' (1 sources, 1 headers) in 0.066 sec: 6 declarations; 7 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.ltk.core.refactoring 4 10000 2017-01-28 12:26:31.562
+!MESSAGE Internal Error
+!STACK 0
+java.lang.NullPointerException
+	at java.io.File.<init>(File.java:277)
+	at org.eclipse.cdt.internal.corext.codemanipulation.InclusionContext.fileExists(InclusionContext.java:244)
+	at org.eclipse.cdt.internal.corext.codemanipulation.InclusionContext.resolveInclude(InclusionContext.java:106)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.HeaderFileReferenceAdjuster.createEdit(HeaderFileReferenceAdjuster.java:264)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.HeaderFileReferenceAdjuster.createEdit(HeaderFileReferenceAdjuster.java:232)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.HeaderFileReferenceAdjuster.addFileChange(HeaderFileReferenceAdjuster.java:205)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.HeaderFileReferenceAdjuster.createChange(HeaderFileReferenceAdjuster.java:184)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.HeaderFileRenameParticipant.checkConditions(HeaderFileRenameParticipant.java:110)
+	at org.eclipse.ltk.core.refactoring.participants.ProcessorBasedRefactoring.checkFinalConditions(ProcessorBasedRefactoring.java:255)
+	at org.eclipse.ltk.core.refactoring.CheckConditionsOperation.run(CheckConditionsOperation.java:83)
+	at org.eclipse.ltk.core.refactoring.CreateChangeOperation.run(CreateChangeOperation.java:119)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:207)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:86)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-01-28 12:26:41.161
+!MESSAGE Indexed 'due-project-test' (0 sources, 0 headers) in 0.002 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.debug.core 4 125 2017-01-28 12:30:24.207
+!MESSAGE Exception occurred executing command line.
+!STACK 0
+java.io.IOException: Cannot run program "/Users/davidminnix/Documents/workspace-due-custom/due-project-test/src/run-all-tests.cpp": error=13, Permission denied
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at java.lang.Runtime.exec(Runtime.java:620)
+	at java.lang.Runtime.exec(Runtime.java:528)
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:879)
+	at org.eclipse.core.externaltools.internal.launchConfigurations.ProgramLaunchDelegate.launch(ProgramLaunchDelegate.java:110)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.IOException: error=13, Permission denied
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:247)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 9 more
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2017-01-28 12:36:37.914
+!MESSAGE No repository found at jar:file:/Users/davidminnix/Downloads/TM-terminal-3.4.1.zip!/.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2017-01-28 12:36:37.950
+!MESSAGE No repository found at file:/Users/davidminnix/Downloads/eclipse/plugins/.
+
+!ENTRY org.eclipse.debug.core 4 125 2017-01-28 12:38:12.502
+!MESSAGE Exception occurred executing command line.
+!STACK 0
+java.io.IOException: Cannot run program "/Users/davidminnix/Documents/workspace-due-custom/due-project-test/src/run-all-tests.cpp": error=13, Permission denied
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at java.lang.Runtime.exec(Runtime.java:620)
+	at java.lang.Runtime.exec(Runtime.java:528)
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:879)
+	at org.eclipse.core.externaltools.internal.launchConfigurations.ProgramLaunchDelegate.launch(ProgramLaunchDelegate.java:110)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.IOException: error=13, Permission denied
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:247)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 9 more
+
+!ENTRY org.eclipse.debug.core 4 125 2017-01-28 12:38:36.364
+!MESSAGE Exception occurred executing command line.
+!STACK 0
+java.io.IOException: Cannot run program "/Users/davidminnix/Documents/workspace-due-custom/due-project-test/src/run-all-tests.cpp": error=13, Permission denied
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at java.lang.Runtime.exec(Runtime.java:620)
+	at java.lang.Runtime.exec(Runtime.java:528)
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:879)
+	at org.eclipse.core.externaltools.internal.launchConfigurations.ProgramLaunchDelegate.launch(ProgramLaunchDelegate.java:110)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.IOException: error=13, Permission denied
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:247)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 9 more
+
+!ENTRY org.eclipse.debug.core 4 125 2017-01-28 12:39:40.766
+!MESSAGE Exception occurred executing command line.
+!STACK 0
+java.io.IOException: Cannot run program "/Users/davidminnix/Documents/workspace-due-custom/due-project-test/src/run-all-tests.cpp": error=13, Permission denied
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at java.lang.Runtime.exec(Runtime.java:620)
+	at java.lang.Runtime.exec(Runtime.java:528)
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:879)
+	at org.eclipse.core.externaltools.internal.launchConfigurations.ProgramLaunchDelegate.launch(ProgramLaunchDelegate.java:110)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.IOException: error=13, Permission denied
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:247)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 9 more
+
+!ENTRY org.eclipse.debug.core 4 125 2017-01-28 12:41:14.193
+!MESSAGE Exception occurred executing command line.
+!STACK 0
+java.io.IOException: Cannot run program "/Users/davidminnix/Documents/workspace-due-custom/due-project-test/Debug/src/run-all-tests.o": error=13, Permission denied
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at java.lang.Runtime.exec(Runtime.java:620)
+	at java.lang.Runtime.exec(Runtime.java:528)
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:879)
+	at org.eclipse.core.externaltools.internal.launchConfigurations.ProgramLaunchDelegate.launch(ProgramLaunchDelegate.java:110)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.IOException: error=13, Permission denied
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:247)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 9 more

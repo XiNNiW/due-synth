@@ -12,3 +12,6 @@
 1485490385741	Delete resource 'due-sketch-board-runner'
 1485563221109	Delete resource 'due_sketch/libraries'
 1485624021960	Delete resource 'due_sketch'
+1485624281111	Rename resource 'due-custom-sketch-runner'
+1485624375390	Rename resource 'due-custom-sketch'
+1485624400559	Rename resource 'due-custom-sketch-test'
