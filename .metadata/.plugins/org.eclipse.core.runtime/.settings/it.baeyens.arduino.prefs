@@ -1,0 +1,21 @@
+714=2
+Automatically\ import\ libraries=true
+Board=Arduino Due (Native USB Port)
+Board\ custom\ option\ selections=Processor\=
+Boards\ file=/Users/davidminnix/eclipse/cpp-neon/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/sam/1.6.11/boards.txt
+Build\ before\ upload\ option=TRUE
+FmStatus=3
+FuStatub=13
+FuStatus=10
+JANTJE.TEMPLATE_FOLDER=
+JANTJE.TEMPLATE_USE_DEFAULT=0
+Last\ used\ Examples=
+Open\ serial\ connections\ with\ the\ monitor=true
+Private\ Library\ Path=/Users/davidminnix/Arduino/libraries\:/Users/davidminnix/Documents/workspace-due-custom/due-custom-sketch
+Private\ hardware\ Path=/Users/davidminnix/Arduino/hardware
+Serial\ Monitor\ Last\ Used\ Line\ Ending\ index=0
+Serial\ monitor\ last\ selected\ Port=/dev/cu.usbmodem621
+Serial\ monitor\ last\ selected\ rate=9600
+UPLOAD.PROTOCOL=Default
+Upload\ port=/dev/cu.usbmodem621
+eclipse.preferences.version=1

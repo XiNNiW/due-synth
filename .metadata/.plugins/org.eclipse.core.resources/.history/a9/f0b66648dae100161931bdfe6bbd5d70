@@ -1,0 +1,27 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CPP_SRCS += \
+../test/factorial.test.cpp \
+../test/run-all-tests.cpp 
+
+OBJS += \
+./test/factorial.test.o \
+./test/run-all-tests.o 
+
+CPP_DEPS += \
+./test/factorial.test.d \
+./test/run-all-tests.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+test/%.o: ../test/%.cpp
+	@echo 'Building file: $<'
+	@echo 'Invoking: Cross G++ Compiler'
+	g++ -I"/Users/davidminnix/Documents/workspace-due-custom/due-custom-sketch/libTest" -I"/Users/davidminnix/Documents/workspace-due-custom/due-custom-sketch/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

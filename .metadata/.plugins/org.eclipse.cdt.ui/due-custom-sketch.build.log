@@ -1,0 +1,6 @@
+20:10:53 **** Incremental Build of configuration Debug for project due-custom-sketch ****
+make all 
+make: Nothing to be done for `all'.
+
+20:10:53 Build Finished (took 121ms)
+

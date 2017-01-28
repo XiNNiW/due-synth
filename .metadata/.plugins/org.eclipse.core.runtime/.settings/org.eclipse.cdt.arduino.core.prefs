@@ -1,0 +1,3 @@
+arduinoHome=/Users/davidminnix/.arduinocdt
+boardUrls=http\://downloads.arduino.cc/packages/package_index.json\nhttp\://arduino.esp8266.com/stable/package_esp8266com_index.json\nhttps\://adafruit.github.io/arduino-board-index/package_adafruit_index.json
+eclipse.preferences.version=1

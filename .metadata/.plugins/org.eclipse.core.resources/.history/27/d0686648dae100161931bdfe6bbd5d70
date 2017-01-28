@@ -1,0 +1,4 @@
+test/run-all-tests.o: ../test/run-all-tests.cpp \
+  /Users/davidminnix/Documents/workspace-due-custom/due-custom-sketch/libTest/gtest/gtest.h
+
+/Users/davidminnix/Documents/workspace-due-custom/due-custom-sketch/libTest/gtest/gtest.h:

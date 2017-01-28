@@ -1,0 +1,16 @@
+/*
+ * main.cpp
+
+ *
+ *  Created on: Jan 23, 2017
+ *      Author: davidminnix
+ */
+
+#include <factorial.h>
+
+int main(){
+
+}
+
+
+

@@ -1,0 +1,7 @@
+test/factorial.test.o: ../test/factorial.test.cpp \
+  /Users/davidminnix/Documents/workspace-due-custom/due-custom-sketch/libTest/gtest/gtest.h \
+  /Users/davidminnix/Documents/workspace-due-custom/due-custom-sketch/include/factorial.h
+
+/Users/davidminnix/Documents/workspace-due-custom/due-custom-sketch/libTest/gtest/gtest.h:
+
+/Users/davidminnix/Documents/workspace-due-custom/due-custom-sketch/include/factorial.h:
