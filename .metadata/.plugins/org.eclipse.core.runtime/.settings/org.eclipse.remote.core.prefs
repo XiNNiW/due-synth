@@ -1,6 +1,0 @@
-connections/org.eclipse.remote.serial.core.connectionType/due-port-one/serial.baudRate=6
-connections/org.eclipse.remote.serial.core.connectionType/due-port-one/serial.byteSize=3
-connections/org.eclipse.remote.serial.core.connectionType/due-port-one/serial.parity=0
-connections/org.eclipse.remote.serial.core.connectionType/due-port-one/serial.portName=/dev/cu.usbmodem621
-connections/org.eclipse.remote.serial.core.connectionType/due-port-one/serial.stopBits=0
-eclipse.preferences.version=1
