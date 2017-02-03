@@ -1,8 +1,11 @@
 #include "Arduino.h"
+#include "SineWavetableOscillator.h"
 //The setup function is called once at startup of the sketch
 int counter = 0;
 #define maxSamplesNum 128
 #define sampleRate 100
+
+
 
 volatile int phaseIncrement = 16;
 
@@ -31,6 +34,8 @@ void setup(){
 	//turn on the timer clock in the power management controller
 	  pmc_set_writeprotect(false);
 	  pmc_enable_periph_clk(ID_TC4);
+	  SineWavetableOscillator* osc = new SineWavetableOscillator();
+	  int fact = osc->nextSample();
 
 	  //we want wavesel 01 with RC
 	  TC_Configure(TC1, 1, TC_CMR_WAVE | TC_CMR_WAVSEL_UP_RC | TC_CMR_TCCLKS_TIMER_CLOCK2);
