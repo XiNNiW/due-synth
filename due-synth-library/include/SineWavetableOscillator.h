@@ -1,12 +1,14 @@
 #ifndef SRC_SINEWAVETABLEOSCILLATOR_H_
 #define SRC_SINEWAVETABLEOSCILLATOR_H_
+#include "IWavetableOscillator.h"
 
-class SineWavetableOscillator {
+
+class SineWavetableOscillator: public IWavetableOscillator {
 
 public:
 	SineWavetableOscillator();
-	void setFrequency(float frequency);
-	int nextSample();
+	virtual void setFrequency(float frequency);
+	virtual long nextSample();
 	virtual ~SineWavetableOscillator();
 
 protected:

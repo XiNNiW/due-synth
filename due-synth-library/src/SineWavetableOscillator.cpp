@@ -16,14 +16,14 @@ static long sineTable[WAVETABLE_SIZE] = { 0, 100, 200, 300, 399, 497, 594, 689, 
 		-497, -399, -300, -200, -100 };
 
 
-SineWavetableOscillator::SineWavetableOscillator() {
+SineWavetableOscillator::SineWavetableOscillator():IWavetableOscillator() {
 	this->sampleRate = 44100;
 	this->frequency = 0.0;
 	this->phase = 0;
 
 }
 
-int SineWavetableOscillator::nextSample(){
+long SineWavetableOscillator::nextSample() {
 	int lookup = (int)((float)(this->phase*this->frequency)/((float)this->sampleRate/(float)WAVETABLE_SIZE))%WAVETABLE_SIZE;
 	this->phase++;
 	if(this->phase >= 128){
@@ -33,11 +33,11 @@ int SineWavetableOscillator::nextSample(){
 
 }
 
-void SineWavetableOscillator::setFrequency(float frequency){
+void SineWavetableOscillator::setFrequency(float frequency) {
 	this->frequency = frequency;
 }
 
-SineWavetableOscillator::~SineWavetableOscillator() {
+SineWavetableOscillator::~SineWavetableOscillator(){
 	// TODO Auto-generated destructor stub
 }
 
