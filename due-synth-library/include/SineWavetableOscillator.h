@@ -3,7 +3,7 @@
 #include "IWavetableOscillator.h"
 
 
-class SineWavetableOscillator: public IWavetableOscillator {
+class SineWavetableOscillator: virtual public IWavetableOscillator {
 
 public:
 	SineWavetableOscillator();

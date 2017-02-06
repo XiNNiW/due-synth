@@ -22,6 +22,5 @@ TEST(TestWavetableSynth, is_calls_next_sample_on_osc_when_called){
 	synth->nextSample();
 	synth->nextSample();
 	synth->nextSample();
-
 }
 

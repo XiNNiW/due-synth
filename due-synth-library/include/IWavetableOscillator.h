@@ -1,7 +1,9 @@
 #ifndef INCLUDE_IWAVETABLEOSCILLATOR_H_
 #define INCLUDE_IWAVETABLEOSCILLATOR_H_ 1
 
-class IWavetableOscillator {
+#include <IAudioGenerator.h>
+
+class IWavetableOscillator : virtual public IAudioGenerator {
 
 public:
 	IWavetableOscillator(){};
