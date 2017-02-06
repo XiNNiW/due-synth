@@ -5,9 +5,9 @@
 class IWavetableSynth {
 
 public:
-	IWavetableSynth();
-	virtual ~IWavetableSynth();
-	virtual void playNote(int noteNumber, int velocity);
+	IWavetableSynth(){};
+	virtual ~IWavetableSynth(){};
+	virtual void playNote(int noteNumber, int velocity)=0;
 };
 
 #endif /* INCLUDE_IWAVETABLESYNTH_H_ */
