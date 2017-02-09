@@ -128,6 +128,7 @@
 	<storageModule moduleId="refreshScope" versionNumber="2">
 		<configuration configurationName="Debug">
 			<resource resourceType="PROJECT" workspacePath="/due-synth-test"/>
+			<resource resourceType="PROJECT" workspacePath="/due-synth-library"/>
 		</configuration>
 		<configuration configurationName="Release">
 			<resource resourceType="PROJECT" workspacePath="/due-synth-test"/>
