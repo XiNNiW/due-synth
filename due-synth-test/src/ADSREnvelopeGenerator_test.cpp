@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <ADSREnvelopeGenerator.h>
 
-static float attackPhaseTable[128] = { 0, 0.007874015748, 0.0157480315,
+static float attackDecayValueTable[128] = { 0, 0.007874015748, 0.0157480315,
 		0.02362204724, 0.03149606299, 0.03937007874, 0.04724409449,
 		0.05511811024, 0.06299212598, 0.07086614173, 0.07874015748,
 		0.08661417323, 0.09448818898, 0.1023622047, 0.1102362205, 0.1181102362,
@@ -45,16 +45,20 @@ TEST(TestADSREnvelopeGenerator, initialized_with_attack_decay_sustain_release_in
 	EXPECT_EQ(expectedReleaseTime, envelope->release);
 	EXPECT_EQ(44100, envelope->sampleRate);
 
-};
+}
+;
 
-TEST(TestADSREnvelopeGenerator, advances_through_stages_when_started_and_stopped) {
+TEST(TestADSREnvelopeGenerator, advances_through_stages_when_started_and_stopped_CASE1) {
 
-	int expectedAttackPhaseIndices[89] = { 0, 1, 2, 4, 5, 7, 8, 10, 11, 13, 14,
-			15, 17, 18, 20, 21, 23, 24, 26, 27, 29, 30, 31, 33, 34, 36, 37, 39,
-			40, 42, 43, 44, 46, 47, 49, 50, 52, 53, 55, 56, 58, 59, 60, 62, 63,
-			65, 66, 68, 69, 71, 72, 74, 75, 76, 78, 79, 81, 82, 84, 85, 87, 88,
-			89, 91, 92, 94, 95, 97, 98, 100, 101, 103, 104, 105, 107, 108, 110,
-			111, 113, 114, 116, 117, 119, 120, 121, 123, 124, 126, 127 };
+	const int numberOfAttackSamples = 89;
+	int expectedAttackPhaseIndices[numberOfAttackSamples] = { 0, 1, 2, 4, 5, 7,
+			8, 10, 11, 13, 14, 15, 17, 18, 20, 21, 23, 24, 26, 27, 29, 30, 31,
+			33, 34, 36, 37, 39, 40, 42, 43, 44, 46, 47, 49, 50, 52, 53, 55, 56,
+			58, 59, 60, 62, 63, 65, 66, 68, 69, 71, 72, 74, 75, 76, 78, 79, 81,
+			82, 84, 85, 87, 88, 89, 91, 92, 94, 95, 97, 98, 100, 101, 103, 104,
+			105, 107, 108, 110, 111, 113, 114, 116, 117, 119, 120, 121, 123,
+			124, 126, 127 };
+
 
 	float expectedAttackTime = 50.0f;
 	float expectedDecayTime = 100.0f;
@@ -71,11 +75,67 @@ TEST(TestADSREnvelopeGenerator, advances_through_stages_when_started_and_stopped
 	EXPECT_EQ(expectedReleaseTime, envelope->release);
 
 	envelope->start();
-	for (int index = 0; index < 89; index++) {
-		EXPECT_EQ(attackPhaseTable[expectedAttackPhaseIndices[index]], envelope->advance());
+	for (int index = 0; index < numberOfAttackSamples; index++) {
+		EXPECT_EQ(attackDecayValueTable[expectedAttackPhaseIndices[index]],
+				envelope->advance());
 	}
+
+//	for (int index = numberOfDecaySamples; index > 0; index++) {
+//		EXPECT_EQ(attackDecayValueTable[expectedAttackPhaseIndices[index]],
+//				envelope->advance());
+//	}
 
 	envelope->stop();
 
 };
 
+//TEST(TestADSREnvelopeGenerator, advances_through_stages_when_started_and_stopped_CASE2) {
+//
+//	const int numberOfAttackSamples = 326;
+//	int expectedAttackPhaseIndices[numberOfAttackSamples] = { 0, 0, 0, 1, 1, 2,
+//			2, 2, 3, 3, 4, 4, 4, 5, 5, 6, 6, 7, 7, 7, 8, 8, 9, 9, 9, 10, 10, 11,
+//			11, 12, 12, 12, 13, 13, 14, 14, 14, 15, 15, 16, 16, 17, 17, 17, 18,
+//			18, 19, 19, 19, 20, 20, 21, 21, 21, 22, 22, 23, 23, 24, 24, 24, 25,
+//			25, 26, 26, 26, 27, 27, 28, 28, 29, 29, 29, 30, 30, 31, 31, 31, 32,
+//			32, 33, 33, 34, 34, 34, 35, 35, 36, 36, 36, 37, 37, 38, 38, 38, 39,
+//			39, 40, 40, 41, 41, 41, 42, 42, 43, 43, 43, 44, 44, 45, 45, 46, 46,
+//			46, 47, 47, 48, 48, 48, 49, 49, 50, 50, 51, 51, 51, 52, 52, 53, 53,
+//			53, 54, 54, 55, 55, 55, 56, 56, 57, 57, 58, 58, 58, 59, 59, 60, 60,
+//			60, 61, 61, 62, 62, 63, 63, 63, 64, 64, 65, 65, 65, 66, 66, 67, 67,
+//			68, 68, 68, 69, 69, 70, 70, 70, 71, 71, 72, 72, 72, 73, 73, 74, 74,
+//			75, 75, 75, 76, 76, 77, 77, 77, 78, 78, 79, 79, 80, 80, 80, 81, 81,
+//			82, 82, 82, 83, 83, 84, 84, 85, 85, 85, 86, 86, 87, 87, 87, 88, 88,
+//			89, 89, 89, 90, 90, 91, 91, 92, 92, 92, 93, 93, 94, 94, 94, 95, 95,
+//			96, 96, 97, 97, 97, 98, 98, 99, 99, 99, 100, 100, 101, 101, 102,
+//			102, 102, 103, 103, 104, 104, 104, 105, 105, 106, 106, 106, 107,
+//			107, 108, 108, 109, 109, 109, 110, 110, 111, 111, 111, 112, 112,
+//			113, 113, 114, 114, 114, 115, 115, 116, 116, 116, 117, 117, 118,
+//			118, 119, 119, 119, 120, 120, 121, 121, 121, 122, 122, 123, 123,
+//			123, 124, 124, 125, 125, 126, 126, 126, 127, 127, 0, 0, 0, 1, 1, 2,
+//			2, 3, 3, 3, 4, 4, 5, 5, 5, 6, 6, };
+//
+//
+//	float expectedAttackTime = 50.0f;
+//	float expectedDecayTime = 100.0f;
+//	float expectedSustainLevel = 0.5f;
+//	float expectedReleaseTime = 500.0f;
+//
+//	ADSREnvelopeGenerator* envelope = new ADSREnvelopeGenerator(
+//			expectedAttackTime, expectedDecayTime, expectedSustainLevel,
+//			expectedReleaseTime);
+//
+//	EXPECT_EQ(expectedAttackTime, envelope->attack);
+//	EXPECT_EQ(expectedDecayTime, envelope->decay);
+//	EXPECT_EQ(expectedSustainLevel, envelope->sustain);
+//	EXPECT_EQ(expectedReleaseTime, envelope->release);
+//
+//	envelope->start();
+//	for (int index = 0; index < numberOfAttackSamples; index++) {
+//		EXPECT_EQ(attackDecayValueTable[expectedAttackPhaseIndices[index]],
+//				envelope->advance());
+//	}
+//
+//
+//	envelope->stop();
+//
+//};

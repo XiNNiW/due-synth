@@ -1,4 +1,5 @@
 #include <SineWavetableOscillator.h>
+#include <math.h>
 
 #define WAVETABLE_SIZE 128
 
@@ -24,13 +25,11 @@ SineWavetableOscillator::SineWavetableOscillator():IWavetableOscillator() {
 }
 
 long SineWavetableOscillator::nextSample() {
-	int lookup = (int)((float)(this->phase*this->frequency)/((float)this->sampleRate/(float)WAVETABLE_SIZE))%WAVETABLE_SIZE;
-	this->phase++;
-	if(this->phase >= 128){
-		this->phase = 0;
-	}
-	return sineTable[lookup];
+	int wavetableIndex = (int)((float)(this->phase*(float)WAVETABLE_SIZE)/((float)this->sampleRate));
+	this->phase+=this->frequency;
+	this->phase=fmod(this->phase,this->sampleRate);
 
+	return sineTable[wavetableIndex];
 }
 
 void SineWavetableOscillator::setFrequency(float frequency) {

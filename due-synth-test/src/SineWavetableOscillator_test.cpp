@@ -47,7 +47,7 @@ TEST(TestOscillatorNextSample, returns_every_sample_from_table_at_100HZ) {
 
 TEST(TestOscillatorNextSample, returns_every_sample_from_table_at_1311HZ) {
 
-	int expectedSampleIndices[128] = {
+	int expectedSampleIndices[141] = {
 			0, 3, 7, 11, 15, 19, 22, 26, 30, 34, 38,
 			41, 45, 49, 53, 57, 60, 64, 68, 72, 76, 79, 83, 87, 91, 95, 98, 102,
 			106, 110, 114, 117, 121, 125, 1, 5, 8, 12, 16, 20, 24, 28, 31, 35,
@@ -56,13 +56,13 @@ TEST(TestOscillatorNextSample, returns_every_sample_from_table_at_1311HZ) {
 			36, 40, 44, 48, 52, 56, 59, 63, 67, 71, 75, 78, 82, 86, 90, 94, 97,
 			101, 105, 109, 113, 116, 120, 124, 0, 4, 7, 11, 15, 19, 23, 26, 30,
 			34, 38, 42, 45, 49, 53, 57, 61, 65, 68, 72, 76, 80, 84, 87, 91, 95,
-			99
+			99, 103, 106, 110, 114, 118, 122, 125, 1, 5, 9, 13, 16, 20
 	};
 
 	SineWavetableOscillator* oscillator = new SineWavetableOscillator();
 	oscillator->setFrequency(1311.0f);
 
-	for (int index = 0; index < 128; index++) {
+	for (int index = 0; index < 141; index++) {
 		EXPECT_EQ(sineTable[expectedSampleIndices[index]],
 				oscillator->nextSample());
 	}
