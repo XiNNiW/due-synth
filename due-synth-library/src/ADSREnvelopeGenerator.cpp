@@ -40,20 +40,43 @@ ADSREnvelopeGenerator::ADSREnvelopeGenerator(
 	this->release = release;
 	this->phase = 0;
 	this->sampleRate = 44100;
+	this->stage = OFF;
 
 }
 
 float ADSREnvelopeGenerator::advance(){
-	int lookup = ((int) (((float) this->phase) * (1.0f / 0.002f)
-			* ((float) ATTACK_TABLE_SIZE / (float) this->sampleRate)))%ATTACK_TABLE_SIZE;
 
-	this->phase++;
+	switch(this->stage){
+		case ATTACK:{
+			int lookup = ((int) (((float) this->phase) * (1.0f / 0.002f)
+					* ((float) ATTACK_TABLE_SIZE / (float) this->sampleRate)));
+			float envelopeValue = attackPhaseTable[lookup];
+			this->phase++;
+			if(lookup<ATTACK_TABLE_SIZE){
+				return envelopeValue;
+			}
+			this->stage = DECAY;
+		}
+		case DECAY:{
+			return this->sustain;
+		}
+		case RELEASE:{
+			return 0;
+		}
+		default:{
+			return 0;
+		}
 
-	return attackPhaseTable[lookup];
+	}
+
 }
 
-void ADSREnvelopeGenerator::start(){}
-void ADSREnvelopeGenerator::stop(){}
+void ADSREnvelopeGenerator::start(){
+	this->stage = ATTACK;
+}
+void ADSREnvelopeGenerator::stop(){
+	this->stage = RELEASE;
+}
 
 ADSREnvelopeGenerator::~ADSREnvelopeGenerator() {
 	// TODO Auto-generated destructor stub
