@@ -1,7 +1,7 @@
 #ifndef INCLUDE_MOCKWAVETABLEOSCILLATOR_H_
 #define INCLUDE_MOCKWAVETABLEOSCILLATOR_H_
 #include <gmock/gmock.h>
-#include <IWavetableOscillator.h>
+#include <Synthesis/IWavetableOscillator.h>
 
 class MockWavetableOscillator : public IWavetableOscillator {
 public:

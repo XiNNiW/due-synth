@@ -1,6 +1,6 @@
-#include <WavetableSynth.h>
+#include <Synthesis/WavetableSynth.h>
 
-#include <SineWavetableOscillator.h>
+#include <Synthesis/SineWavetableOscillator.h>
 #include <math.h>
 
 WavetableSynth::WavetableSynth():IWavetableSynth() {

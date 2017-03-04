@@ -1,6 +1,6 @@
 #ifndef SRC_SINEWAVETABLEOSCILLATOR_H_
 #define SRC_SINEWAVETABLEOSCILLATOR_H_
-#include <IWavetableOscillator.h>
+#include <Synthesis/IWavetableOscillator.h>
 
 
 class SineWavetableOscillator: virtual public IWavetableOscillator {

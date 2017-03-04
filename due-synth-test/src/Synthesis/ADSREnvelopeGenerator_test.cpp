@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <ADSREnvelopeGenerator.h>
+#include <Synthesis/ADSREnvelopeGenerator.h>
 
 TEST(TestADSREnvelopeGenerator, initialized_with_attack_decay_sustain_release_in_millis) {
 	float expectedAttackTime = 50.0f;
@@ -104,7 +104,7 @@ TEST(TestADSREnvelopeGenerator, advances_through_stages_when_started_and_stopped
 	envelope->stop();
 
 	for (int index = 0; index < numberOfReleaseSamples; index++) {
-		EXPECT_NEAR(expectedReleaseValues[index], envelope->advance(),0.01);
+		EXPECT_NEAR(expectedReleaseValues[index], envelope->advance(),0.01f);
 	}
 	EXPECT_FLOAT_EQ(0.0f, envelope->advance());
 

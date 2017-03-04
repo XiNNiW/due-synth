@@ -1,10 +1,10 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include <IWavetableSynth.h>
-#include <WavetableSynth.h>
-#include <IWavetableOscillator.h>
+#include <Synthesis/IWavetableSynth.h>
+#include <Synthesis/WavetableSynth.h>
+#include <Synthesis/IWavetableOscillator.h>
 #include <MockWavetableOscillator.h>
-#include <SineWavetableOscillator.h>
+#include <Synthesis/SineWavetableOscillator.h>
 #include <typeinfo>
 using ::testing::Mock;
 using ::testing::FloatEq;

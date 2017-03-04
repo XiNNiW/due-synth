@@ -1,4 +1,4 @@
-#include "ADSREnvelopeGenerator.h"
+#include <Synthesis/ADSREnvelopeGenerator.h>
 
 ADSREnvelopeGenerator::ADSREnvelopeGenerator(float attack, float decay,
 		float sustain, float release) {

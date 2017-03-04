@@ -1,8 +1,8 @@
 
 #ifndef SRC_WAVETABLESYNTH_H_
 #define SRC_WAVETABLESYNTH_H_
-#include <IWavetableSynth.h>
-#include <IWavetableOscillator.h>
+#include <Synthesis/IWavetableSynth.h>
+#include <Synthesis/IWavetableOscillator.h>
 #include <IAudioGenerator.h>
 
 class WavetableSynth : public IWavetableSynth, virtual IAudioGenerator{

@@ -1,4 +1,4 @@
-#include <SineWavetableOscillator.h>
+#include <Synthesis/SineWavetableOscillator.h>
 #include <math.h>
 
 #define WAVETABLE_SIZE 128

@@ -1,5 +1,5 @@
 #include <MockWavetableOscillator.h>
-#include <IWavetableOscillator.h>
+#include <Synthesis/IWavetableOscillator.h>
 
 MockWavetableOscillator::MockWavetableOscillator():IWavetableOscillator(){
 
