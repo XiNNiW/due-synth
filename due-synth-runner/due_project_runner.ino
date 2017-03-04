@@ -1,6 +1,6 @@
 #include "Arduino.h"
 
-#include "SineWavetableOscillator.h"
+#include <Synthesis/SineWavetableOscillator.h>
 
 //The setup function is called once at startup of the sketch
 SineWavetableOscillator* oscillator = new SineWavetableOscillator();

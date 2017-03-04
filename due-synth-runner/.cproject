@@ -21,8 +21,10 @@
 								<option id="it.baeyens.arduino.compiler.cpp.sketch.option.incpath.987388145" name="Include Paths (-I)" superClass="it.baeyens.arduino.compiler.cpp.sketch.option.incpath" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-runner/core/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-runner/core/variant}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-runner/libraries/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-library/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-runner/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-runner/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-runner/libraries/src}&quot;"/>
 								</option>
 								<inputType id="it.baeyens.arduino.compiler.cpp.sketch.input.2042023131" name="CPP source files" superClass="it.baeyens.arduino.compiler.cpp.sketch.input"/>
 							</tool>

@@ -9,12 +9,12 @@ public:
 	MockArduinoDueLibraryWrapper();
 	~MockArduinoDueLibraryWrapper();
 	MOCK_METHOD1(pmcSetWriteProtect, void(bool b));
-	MOCK_METHOD1(pmcEnablePeripheralClock, void(IRQn_Type clockIdentifier));
-	MOCK_METHOD3(configureTimerClock, void(Tc* clock, uint32_t chan, uint32_t v));
-	MOCK_METHOD3(setRCOnTimerClock, void(Tc* tc, uint32_t chan, uint32_t v));
-	MOCK_METHOD2(startTimerClock, void(Tc* pTc, uint32_t dwChannel));
-	MOCK_METHOD2(getStatusOfTimerClock, uint32_t(Tc *p_tc, uint32_t ul_channel));
-	MOCK_METHOD1(enableNVICInterruptRequest, void(IRQn_Type clockIdentifier));
+//	MOCK_METHOD1(pmcEnablePeripheralClock, void(IRQn_Type clockIdentifier));
+//	MOCK_METHOD3(configureTimerClock, void(Tc* clock, uint32_t chan, uint32_t v));
+//	MOCK_METHOD3(setRCOnTimerClock, void(Tc* tc, uint32_t chan, uint32_t v));
+//	MOCK_METHOD2(startTimerClock, void(Tc* pTc, uint32_t dwChannel));
+//	MOCK_METHOD2(getStatusOfTimerClock, uint32_t(Tc *p_tc, uint32_t ul_channel));
+//	MOCK_METHOD1(enableNVICInterruptRequest, void(IRQn_Type clockIdentifier));
 	MOCK_METHOD2(setPinMode, void(uint32_t ulPin, uint32_t ulMode));
 	MOCK_METHOD1(setAnalogReadResolution, void(uint32_t resolutionInBits));
 	MOCK_METHOD1(setAnalogWriteResolution, void(uint32_t resolutionInBits));
