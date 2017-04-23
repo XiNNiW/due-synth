@@ -1,9 +1,10 @@
 #include <ArduinoDueLibraryWrapper.h>
 #include "Arduino.h"
+#include <map>
+
+//std::map<ClockIdentifier, Tc*> mapOfSam3xClocks;
 
 ArduinoDueLibraryWrapper* ArduinoDueLibraryWrapper::singleton = 0;
-Tc* ArduinoDueLibraryWrapper::TIMER_CLOCK_ONE = TC1;
-uint32_t ArduinoDueLibraryWrapper::TIMER_CLOCK_IER_CPCS = TC_IER_CPCS;
 
 ArduinoDueLibraryWrapper* ArduinoDueLibraryWrapper::instance(){
 	if(!singleton){
@@ -19,7 +20,7 @@ void ArduinoDueLibraryWrapper::pmcSetWriteProtect(bool writeProtectOn){
 	pmc_set_writeprotect(writeProtectOn);
 };
 
-void ArduinoDueLibraryWrapper::pmcEnablePeripheralClock(IRQn_Type clockIdentifier){
+void ArduinoDueLibraryWrapper::pmcEnablePeripheralClock(InterruptType clockIdentifier){
 	pmc_enable_periph_clk(clockIdentifier);
 };
 
@@ -39,8 +40,8 @@ uint32_t ArduinoDueLibraryWrapper::getStatusOfTimerClock(Tc *p_tc, uint32_t ul_c
 	return TC_GetStatus(p_tc,ul_channel);
 };
 
-void ArduinoDueLibraryWrapper::enableNVICInterruptRequest(IRQn_Type counterIdentifier){
-	NVIC_EnableIRQ(counterIdentifier);
+void ArduinoDueLibraryWrapper::enableNVICInterruptRequest(InterruptType counterIdentifier){
+	NVIC_EnableIRQ((IRQn)counterIdentifier);
 };
 
 void ArduinoDueLibraryWrapper::setPinMode(uint32_t ulPin, uint32_t ulMode){
