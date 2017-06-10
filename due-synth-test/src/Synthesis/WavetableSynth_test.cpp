@@ -5,15 +5,34 @@
 #include <Synthesis/IWavetableOscillator.h>
 #include <MockWavetableOscillator.h>
 #include <Synthesis/SineWavetableOscillator.h>
+#include <Synthesis/IEnvelopeGenerator.h>
+#include <Synthesis/ADSREnvelopeGenerator.h>
+#include <MockEnvelopeGenerator.h>
 #include <typeinfo>
 using ::testing::Mock;
 using ::testing::FloatEq;
 
-TEST(TestWavetableSynth, is_constructed_with_an_oscillator){
+TEST(TestWavetableSynth, is_constructed_with_an_oscillator_and_envelope){
 	IWavetableOscillator* expectedOscillator = new SineWavetableOscillator();
+	IEnvelopeGenerator* expectedEnvelope = new ADSREnvelopeGenerator(0,0,0,0);
 	WavetableSynth* synth = new WavetableSynth();
 	IWavetableOscillator* actualOscillator = synth->oscillator;
+	IEnvelopeGenerator* actualEnvelope = synth->envelope;
 	EXPECT_EQ(typeid(expectedOscillator).name(),typeid(actualOscillator).name());
+	EXPECT_EQ(typeid(expectedEnvelope).name(),typeid(actualEnvelope).name());
+}
+
+TEST(TestWavetableSynth, destructs_properly){
+	MockWavetableOscillator* mockOscillator = new MockWavetableOscillator();
+	MockEnvelopeGenerator* mockEnvelope = new MockEnvelopeGenerator();
+	WavetableSynth* synth = new WavetableSynth();
+	synth->oscillator = mockOscillator;
+	synth->envelope = mockEnvelope;
+	EXPECT_CALL(*mockOscillator,Die());
+	EXPECT_CALL(*mockEnvelope,Die());
+	synth->~WavetableSynth();
+	EXPECT_TRUE(Mock::VerifyAndClear(&*mockOscillator));
+	EXPECT_TRUE(Mock::VerifyAndClear(&*mockEnvelope));
 }
 
 TEST(TestWavetableSynth, is_calls_next_sample_on_osc_when_called){
@@ -65,4 +84,6 @@ TEST(TestWavetableSynth, has_a_play_sets_frequency_of_osc_neg5){
 	synth->oscillator = &mockOscillator;
 	synth->playNote(-5, 100);
 }
+
+
 

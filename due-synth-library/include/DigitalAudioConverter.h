@@ -8,9 +8,11 @@ class DigitalAudioConverter: public IDigitalAudioConverter{
 private:
 	static DigitalAudioConverter* singleton;
 	DigitalAudioConverter();
+	IAudioGenerator* generator;
 public:
-	void addAudioGeneratorToOutput(IAudioGenerator* generator);
 	static IDigitalAudioConverter* instance();
+	virtual void addAudioGeneratorToOutput(IAudioGenerator* generator);
+	virtual long nextSample();
 	~DigitalAudioConverter();
 };
 

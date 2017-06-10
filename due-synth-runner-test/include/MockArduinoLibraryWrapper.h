@@ -3,7 +3,7 @@
 #include "Arduino.h"
 #include <gmock/gmock.h>
 #include <ArduinoDueLibraryWrapper.h>
-#include "component_tc.h"
+//#include "component_tc.h"
 
 class MockArduinoDueLibraryWrapper : public ArduinoDueLibraryWrapper {
 public:
@@ -11,7 +11,7 @@ public:
 	~MockArduinoDueLibraryWrapper();
 	MOCK_METHOD1(pmcSetWriteProtect, void(bool b));
 	MOCK_METHOD1(pmcEnablePeripheralClock, void(InterruptType c));
-	MOCK_METHOD3(configureTimerClock, void(Tc* clockId, uint32_t chan, uint32_t v));
+	//MOCK_METHOD3(configureTimerClock, void(Tc* clockId, uint32_t chan, uint32_t v));
 //	MOCK_METHOD3(setRCOnTimerClock, void(ClockIdentifier clockId, uint32_t chan, uint32_t v));
 //	MOCK_METHOD2(startTimerClock, void(ClockIdentifier clockId, uint32_t dwChannel));
 //	MOCK_METHOD2(getStatusOfTimerClock, uint32_t(ClockIdentifier clockId, uint32_t ul_channel));

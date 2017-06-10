@@ -1,5 +1,12 @@
 #include <gtest/gtest.h>
 #include <Synthesis/ADSREnvelopeGenerator.h>
+#include <Synthesis/IEnvelopeGenerator.h>
+
+TEST(TestADSREnvelopeGenerator, implements_interface) {
+	ADSREnvelopeGenerator* concrete = new ADSREnvelopeGenerator(0,0,0,0);
+	IEnvelopeGenerator* interface = concrete;
+	EXPECT_EQ(interface,concrete);
+};
 
 TEST(TestADSREnvelopeGenerator, initialized_with_attack_decay_sustain_release_in_millis) {
 	float expectedAttackTime = 50.0f;
@@ -17,8 +24,7 @@ TEST(TestADSREnvelopeGenerator, initialized_with_attack_decay_sustain_release_in
 	EXPECT_EQ(expectedReleaseTime, envelope->release);
 	EXPECT_EQ(44100, envelope->sampleRate);
 
-}
-;
+};
 
 TEST(TestADSREnvelopeGenerator, advances_through_stages_when_started_and_stopped_CASE1) {
 

@@ -8,9 +8,11 @@
 #ifndef SRC_ADSRENVELOPEGENERATOR_H_
 #define SRC_ADSRENVELOPEGENERATOR_H_
 
+#include <Synthesis/IEnvelopeGenerator.h>
+
 enum EnvelopeStages {OFF,ATTACK,DECAY,SUSTAIN,RELEASE};
 
-class ADSREnvelopeGenerator {
+class ADSREnvelopeGenerator: public IEnvelopeGenerator{
 public:
 	ADSREnvelopeGenerator(float attack,float decay, float sustain, float release);
 	virtual ~ADSREnvelopeGenerator();

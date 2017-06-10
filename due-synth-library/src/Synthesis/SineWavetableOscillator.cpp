@@ -21,8 +21,8 @@ SineWavetableOscillator::SineWavetableOscillator():IWavetableOscillator() {
 	this->sampleRate = 44100;
 	this->frequency = 0.0;
 	this->phase = 0;
-
 }
+SineWavetableOscillator::~SineWavetableOscillator(){}
 
 long SineWavetableOscillator::nextSample() {
 	int wavetableIndex = (int)((float)(this->phase*(float)WAVETABLE_SIZE)/((float)this->sampleRate));
@@ -36,9 +36,6 @@ void SineWavetableOscillator::setFrequency(float frequency) {
 	this->frequency = frequency;
 }
 
-SineWavetableOscillator::~SineWavetableOscillator(){
-	// TODO Auto-generated destructor stub
-}
 
 
 

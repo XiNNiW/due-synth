@@ -3,10 +3,11 @@
 #define INCLUDE_IDIGITALAUDIOCONVERTER_H_
 #include <IAudioGenerator.h>
 
-class IDigitalAudioConverter {
+class IDigitalAudioConverter{
 public:
 	IDigitalAudioConverter(){};
 	virtual void addAudioGeneratorToOutput(IAudioGenerator* generator)=0;
+	virtual long nextSample()=0;
 	virtual ~IDigitalAudioConverter(){};
 };
 

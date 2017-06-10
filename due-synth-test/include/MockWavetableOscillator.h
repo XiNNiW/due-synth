@@ -6,7 +6,8 @@
 class MockWavetableOscillator : public IWavetableOscillator {
 public:
 	MockWavetableOscillator();
-	~MockWavetableOscillator();
+	~MockWavetableOscillator(){Die();};
+	MOCK_METHOD0(Die,void());
 	MOCK_METHOD0(nextSample,long());
 	MOCK_METHOD1(setFrequency,void(float f));
 };
