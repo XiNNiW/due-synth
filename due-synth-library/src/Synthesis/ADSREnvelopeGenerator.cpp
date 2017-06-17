@@ -1,5 +1,5 @@
 #include <Synthesis/ADSREnvelopeGenerator.h>
-
+namespace sunthesis{
 ADSREnvelopeGenerator::ADSREnvelopeGenerator(float attack, float decay,
 		float sustain, float release) {
 	this->attack = attack;
@@ -75,5 +75,6 @@ void ADSREnvelopeGenerator::stop() {
 
 ADSREnvelopeGenerator::~ADSREnvelopeGenerator() {
 	// TODO Auto-generated destructor stub
+}
 }
 

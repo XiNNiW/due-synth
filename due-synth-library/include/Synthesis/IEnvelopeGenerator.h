@@ -7,7 +7,7 @@
 
 #ifndef INCLUDE_SYNTHESIS_IENVELOPEGENERATOR_H_
 #define INCLUDE_SYNTHESIS_IENVELOPEGENERATOR_H_
-
+namespace sunthesis{
 class IEnvelopeGenerator{
 public:
 	IEnvelopeGenerator(){};
@@ -16,5 +16,6 @@ public:
 	virtual void start()=0;
 	virtual void stop()=0;
 };
+}
 
 #endif /* INCLUDE_SYNTHESIS_IENVELOPEGENERATOR_H_ */

@@ -5,7 +5,7 @@
 #include <Synthesis/IWavetableOscillator.h>
 #include <Synthesis/IEnvelopeGenerator.h>
 #include <IAudioGenerator.h>
-
+namespace sunthesis{
 class WavetableVoice : public IWavetableVoice{
 
 public:
@@ -16,5 +16,6 @@ public:
 	IWavetableOscillator* oscillator;
 	IEnvelopeGenerator* envelope;
 };
+}
 
 #endif /* SRC_WAVETABLEVOICE_H_ */

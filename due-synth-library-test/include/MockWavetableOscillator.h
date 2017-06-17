@@ -2,7 +2,7 @@
 #define INCLUDE_MOCKWAVETABLEOSCILLATOR_H_
 #include <gmock/gmock.h>
 #include <Synthesis/IWavetableOscillator.h>
-
+using namespace sunthesis;
 class MockWavetableOscillator : public IWavetableOscillator {
 public:
 	MockWavetableOscillator();

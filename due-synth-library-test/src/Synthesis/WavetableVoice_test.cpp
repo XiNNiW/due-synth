@@ -12,7 +12,7 @@
 using ::testing::Mock;
 using ::testing::FloatEq;
 using ::testing::Return;
-
+using namespace sunthesis;
 TEST(TestWavetableSynth, is_constructed_with_an_oscillator_and_envelope){
 	IWavetableOscillator* expectedOscillator = new SineWavetableOscillator();
 	IEnvelopeGenerator* expectedEnvelope = new ADSREnvelopeGenerator(0,0,0,0);

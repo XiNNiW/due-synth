@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <Synthesis/ADSREnvelopeGenerator.h>
 #include <Synthesis/IEnvelopeGenerator.h>
-
+using namespace sunthesis;
 TEST(TestADSREnvelopeGenerator, implements_interface) {
 	ADSREnvelopeGenerator* concrete = new ADSREnvelopeGenerator(0,0,0,0);
 	IEnvelopeGenerator* interface = concrete;

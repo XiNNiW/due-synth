@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <Synthesis/SineWavetableOscillator.h>
-
+using namespace sunthesis;
 static long sineTable[128] = { 0, 100, 200, 300, 399, 497, 594, 689, 783, 875,
 		965, 1052, 1137, 1219, 1299, 1375, 1448, 1517, 1583, 1644, 1702, 1756,
 		1806, 1851, 1892, 1928, 1959, 1986, 2008, 2025, 2038, 2045, 2048, 2045,

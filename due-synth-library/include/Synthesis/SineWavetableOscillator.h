@@ -2,7 +2,7 @@
 #define SRC_SINEWAVETABLEOSCILLATOR_H_
 #include <Synthesis/IWavetableOscillator.h>
 
-
+namespace sunthesis{
 class SineWavetableOscillator: virtual public IWavetableOscillator {
 
 public:
@@ -17,5 +17,6 @@ protected:
 	float frequency;
 
 };
+}
 
 #endif /* SRC_SINEWAVETABLEOSCILLATOR_H_ */

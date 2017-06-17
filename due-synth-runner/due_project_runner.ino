@@ -5,7 +5,7 @@
 #include <DigitalAudioConverter.h>
 #include <Synthesis/ADSREnvelopeGenerator.h>
 
-
+using namespace sunthesis;
 WavetableVoice* synthVoice = new WavetableVoice();
 ADSREnvelopeGenerator* envelope2 = new ADSREnvelopeGenerator(10,10,1,10);
 IDigitalAudioConverter* dac = DigitalAudioConverter::instance();

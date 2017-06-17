@@ -3,6 +3,7 @@
 #include <math.h>
 #include <Synthesis/WavetableVoice.h>
 
+namespace sunthesis{
 WavetableVoice::WavetableVoice():IWavetableVoice() {
 	this->oscillator = new SineWavetableOscillator();
 	this->envelope = new ADSREnvelopeGenerator(10,10,1,10);
@@ -29,6 +30,7 @@ void WavetableVoice::playNote(int noteNumber, int velocity){
 	float numberOfNotesInAnOctave = 12.0f;
 	float frequency = referenceFrequency*exp2f((float)(noteNumber-referenceNote)/numberOfNotesInAnOctave);
 	this->oscillator->setFrequency(frequency);
+}
 }
 
 

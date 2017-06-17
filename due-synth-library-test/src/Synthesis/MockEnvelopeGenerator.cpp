@@ -5,7 +5,7 @@
  *      Author: davidminnix
  */
 #include <MockEnvelopeGenerator.h>
-
+using namespace sunthesis;
 MockEnvelopeGenerator::MockEnvelopeGenerator(){};
 
 

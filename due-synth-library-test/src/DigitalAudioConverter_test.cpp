@@ -3,7 +3,7 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 using ::testing::Mock;
-
+using namespace sunthesis;
 
 TEST(TestDigitalAudioConverter, is_a_singleton){
 	IDigitalAudioConverter* dac1 = DigitalAudioConverter::instance();

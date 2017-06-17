@@ -3,7 +3,7 @@
 #define INCLUDE_DIGITALAUDIOCONVERTER_H_
 #include <IAudioGenerator.h>
 #include <IDigitalAudioConverter.h>
-
+namespace sunthesis{
 class DigitalAudioConverter: public IDigitalAudioConverter{
 private:
 	static DigitalAudioConverter* singleton;
@@ -15,5 +15,6 @@ public:
 	virtual long nextSample();
 	~DigitalAudioConverter();
 };
+}
 
 #endif /* INCLUDE_DIGITALAUDIOCONVERTER_H_ */

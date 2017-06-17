@@ -2,7 +2,7 @@
 #define INCLUDE_IWAVETABLEOSCILLATOR_H_ 1
 
 #include <IAudioGenerator.h>
-
+namespace sunthesis{
 class IWavetableOscillator : virtual public IAudioGenerator {
 
 public:
@@ -11,5 +11,6 @@ public:
 	virtual long nextSample()=0;
 	virtual ~IWavetableOscillator(){};
 };
+}
 
 #endif /* INCLUDE_IWAVETABLEOSCILLATOR_H_ */

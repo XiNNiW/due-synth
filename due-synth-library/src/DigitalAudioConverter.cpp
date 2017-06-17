@@ -1,4 +1,5 @@
 #include <DigitalAudioConverter.h>
+using namespace sunthesis;
 DigitalAudioConverter* DigitalAudioConverter::singleton = 0;
 
 DigitalAudioConverter::DigitalAudioConverter():IDigitalAudioConverter(){

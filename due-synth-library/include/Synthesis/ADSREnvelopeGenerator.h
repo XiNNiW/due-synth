@@ -9,7 +9,7 @@
 #define SRC_ADSRENVELOPEGENERATOR_H_
 
 #include <Synthesis/IEnvelopeGenerator.h>
-
+namespace sunthesis{
 enum EnvelopeStages {OFF,ATTACK,DECAY,SUSTAIN,RELEASE};
 
 class ADSREnvelopeGenerator: public IEnvelopeGenerator{
@@ -30,5 +30,6 @@ private:
 	static const int ATTACK_TABLE_SIZE = 128;
 
 };
+}
 
 #endif /* SRC_ADSRENVELOPEGENERATOR_H_ */

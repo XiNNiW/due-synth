@@ -10,7 +10,7 @@
 
 #include <gmock/gmock.h>
 #include <Synthesis/IEnvelopeGenerator.h>
-
+using namespace sunthesis;
 class MockEnvelopeGenerator : public IEnvelopeGenerator {
 public:
 	MockEnvelopeGenerator();
