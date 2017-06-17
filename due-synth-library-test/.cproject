@@ -29,7 +29,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/libTest}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-library/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-library/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-test/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/due-synth-library-test/include}&quot;"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.include.files.949414594" name="Include files (-include)" superClass="gnu.cpp.compiler.option.include.files" useByScannerDiscovery="false"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.2078853569" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>

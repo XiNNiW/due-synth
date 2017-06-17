@@ -1,23 +1,29 @@
-#include <Synthesis/WavetableSynth.h>
-
 #include <Synthesis/SineWavetableOscillator.h>
 #include <Synthesis/ADSREnvelopeGenerator.h>
 #include <math.h>
+#include <Synthesis/WavetableVoice.h>
 
-WavetableSynth::WavetableSynth():IWavetableSynth() {
+WavetableVoice::WavetableVoice():IWavetableVoice() {
 	this->oscillator = new SineWavetableOscillator();
 	this->envelope = new ADSREnvelopeGenerator(0,0,0,0);
 }
-WavetableSynth::~WavetableSynth() {
+
+WavetableVoice::~WavetableVoice() {
 	delete this->oscillator;
 	delete this->envelope;
 }
 
-long WavetableSynth::nextSample(){
-	return this->oscillator->nextSample();
+long WavetableVoice::nextSample(){
+	return this->oscillator->nextSample()*this->envelope->advance();
 }
 
-void WavetableSynth::playNote(int noteNumber, int velocity){
+void WavetableVoice::playNote(int noteNumber, int velocity){
+	if(velocity>0){
+		this->envelope->start();
+	}else{
+		this->envelope->stop();
+	}
+
 	float referenceFrequency = 220.0f;
 	int referenceNote = 57;
 	float numberOfNotesInAnOctave = 12.0f;
