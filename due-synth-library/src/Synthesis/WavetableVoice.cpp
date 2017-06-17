@@ -5,7 +5,7 @@
 
 WavetableVoice::WavetableVoice():IWavetableVoice() {
 	this->oscillator = new SineWavetableOscillator();
-	this->envelope = new ADSREnvelopeGenerator(0,0,0,0);
+	this->envelope = new ADSREnvelopeGenerator(10,10,1,10);
 }
 
 WavetableVoice::~WavetableVoice() {

@@ -2,7 +2,9 @@
 #ifndef INCLUDE_IWAVETABLEVOICE_H_
 #define INCLUDE_IWAVETABLEVOICE_H_
 
-class IWavetableVoice {
+#include <IAudioGenerator.h>
+
+class IWavetableVoice: public IAudioGenerator {
 
 public:
 	IWavetableVoice(){};

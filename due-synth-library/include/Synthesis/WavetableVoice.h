@@ -6,7 +6,7 @@
 #include <Synthesis/IEnvelopeGenerator.h>
 #include <IAudioGenerator.h>
 
-class WavetableVoice : public IWavetableVoice, virtual IAudioGenerator{
+class WavetableVoice : public IWavetableVoice{
 
 public:
 	WavetableVoice();

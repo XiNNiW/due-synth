@@ -24,10 +24,11 @@ public:
 	float sustain;
 	float release;
 	int sampleRate;
+	EnvelopeStages stage;
 private:
 	int phase;
 	static const int ATTACK_TABLE_SIZE = 128;
-	EnvelopeStages stage;
+
 };
 
 #endif /* SRC_ADSRENVELOPEGENERATOR_H_ */

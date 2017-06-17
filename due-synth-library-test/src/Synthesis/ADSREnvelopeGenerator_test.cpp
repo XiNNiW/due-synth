@@ -26,6 +26,40 @@ TEST(TestADSREnvelopeGenerator, initialized_with_attack_decay_sustain_release_in
 
 };
 
+TEST(TestADSREnvelopeGenerator, takes_441_samples_to_go_through_10ms_of_envelope_stage){
+	float expectedAttackTime = 10.0f;
+	float expectedDecayTime = 10.0f;
+	float expectedSustainLevel = 1.0;
+	float expectedReleaseTime = 10.0f;
+
+	ADSREnvelopeGenerator* envelope = new ADSREnvelopeGenerator(
+			expectedAttackTime, expectedDecayTime, expectedSustainLevel,
+			expectedReleaseTime);
+
+	EXPECT_EQ(44100, envelope->sampleRate);
+
+	EXPECT_EQ(OFF,envelope->stage);
+	envelope->start();
+	EXPECT_EQ(ATTACK,envelope->stage);
+
+	for(int i=0;i<442;i++){
+		envelope->advance();
+	}
+	EXPECT_EQ(DECAY,envelope->stage);
+	for(int i=0;i<442;i++){
+		envelope->advance();
+	}
+	EXPECT_EQ(SUSTAIN,envelope->stage);
+	envelope->stop();
+	EXPECT_EQ(RELEASE,envelope->stage);
+
+	for(int i=0;i<442;i++){
+		envelope->advance();
+	}
+	EXPECT_EQ(OFF,envelope->stage);
+
+}
+
 TEST(TestADSREnvelopeGenerator, advances_through_stages_when_started_and_stopped_CASE1) {
 
 	const int numberOfAttackSamples = 45;
@@ -271,6 +305,5 @@ TEST(TestADSREnvelopeGenerator, advances_through_stages_when_started_and_stopped
 
 	EXPECT_FLOAT_EQ(0.0f, envelope->advance());
 
-}
-;
+};
 
