@@ -8,7 +8,7 @@ class SineWavetableOscillator: virtual public IWavetableOscillator {
 public:
 	SineWavetableOscillator();
 	virtual void setFrequency(float frequency);
-	virtual long nextSample();
+	virtual sample nextSample();
 	virtual ~SineWavetableOscillator();
 
 protected:

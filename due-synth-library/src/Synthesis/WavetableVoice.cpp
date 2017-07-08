@@ -14,7 +14,7 @@ WavetableVoice::~WavetableVoice() {
 	delete this->envelope;
 }
 
-long WavetableVoice::nextSample(){
+sample WavetableVoice::nextSample(){
 	return this->oscillator->nextSample()*this->envelope->advance();
 }
 

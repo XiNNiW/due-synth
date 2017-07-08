@@ -24,7 +24,7 @@ SineWavetableOscillator::SineWavetableOscillator():IWavetableOscillator() {
 }
 SineWavetableOscillator::~SineWavetableOscillator(){}
 
-long SineWavetableOscillator::nextSample() {
+sample SineWavetableOscillator::nextSample() {
 	int wavetableIndex = (int)((float)(this->phase*(float)WAVETABLE_SIZE)/((float)this->sampleRate));
 	this->phase+=this->frequency;
 	this->phase=fmod(this->phase,this->sampleRate);

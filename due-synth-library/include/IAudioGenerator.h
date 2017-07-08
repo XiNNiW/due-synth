@@ -7,12 +7,13 @@
 
 #ifndef INCLUDE_IAUDIOGENERATOR_H_
 #define INCLUDE_IAUDIOGENERATOR_H_
+#include <CommonTypes.h>
 namespace sunthesis{
 class IAudioGenerator{
 
 public:
 	IAudioGenerator(){}
-	virtual long nextSample()=0;
+	virtual sample nextSample()=0;
 	virtual ~IAudioGenerator(){};
 };
 }
