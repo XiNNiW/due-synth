@@ -11,7 +11,7 @@ class WavetableVoice : public IWavetableVoice{
 public:
 	WavetableVoice();
 	virtual ~WavetableVoice();
-	virtual long nextSample();
+	virtual sample nextSample();
 	virtual void playNote(int noteNumber, int velocity);
 	IWavetableOscillator* oscillator;
 	IEnvelopeGenerator* envelope;
