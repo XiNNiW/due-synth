@@ -8,7 +8,7 @@ class IWavetableOscillator : virtual public IAudioGenerator {
 public:
 	IWavetableOscillator(){};
 	virtual void setFrequency(float frequency)=0;
-	virtual long nextSample()=0;
+	virtual sample nextSample()=0;
 	virtual ~IWavetableOscillator(){};
 };
 }
